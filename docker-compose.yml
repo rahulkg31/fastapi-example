@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  fastapi:
+    image: fastapi-model-serve-example
+    volumes:
+      - ./:/opt/app/
+    ports:
+      - "5001:5000"
+    command: python fast_app.py
